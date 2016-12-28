@@ -3,6 +3,25 @@
 }
 
 body{
+	background-image: url(../images/safe.jpg);
+	background-size: cover;
 	font-size: 14px;
 	font-weight: 700;
+	color: white;
+}
+
+h1{
+
+	background-color: black;
+	padding: 15px;
+	font-size: 44px;
+	text-align: center;
+	margin: 0px;
+	float: left;
+	width: 300px;
+	margin-left: 500px;
+}
+
+input{
+	clear:both;
 }
