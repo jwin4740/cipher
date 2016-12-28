@@ -10,25 +10,41 @@
 
 <body>
     <h1>Cipher </h1>
-    <hr style="clear:both">
-    <input type="text" id="caesarkey"> Input a number
-    <button id="getvalues">ENTER</button>
-    <br>
-    <br>
-    <h3 id="printnumber">Your key is: </h3>
-    <br>
-    <br>
-    <br>
-    <input type="text" id="message"> Input message
-    <button id="getmessage">Confirm</button>
-    <h3 id="printmessage">Your message is: </h3>
-    
-    
-   
-    <button id="convert">DECODE</button>
-    <br>
-    <h2 id="printnumber3">Result is: </h2>
-    
+    <section id="caesar"> Caesar Cipher
+        <div>
+            <input type="text" id="caesarkey"> Input a number
+            <button id="getvalues">ENTER</button>
+            <br>
+            <br>
+            <h3 id="printnumber">Your key is: </h3>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <input type="text" id="message"> Input message
+            <button id="getmessage">DECODE</button>
+        </div>
+        <div>
+            <h3 id="printnumber3"><pre>Result: </pre></h3>
+        </div>
+    </section>
+    <hr><hr><hr><hr><hr><hr><hr><hr><hr>
+    <section id="vigenere"> Vigenere Cipher
+        <div>
+            <input type="text" id="vigenerekey"> Input a number
+            <button id="getvalues">ENTER</button>
+            <h3 id="printnumber">Your key is: </h3>
+        </div>
+        
+        <div>
+            <input type="text" id="vmessage"> Input message
+            <button id="getmessagev">DECODE</button>
+        </div>
+        <div>
+            <h3 id="printnumberv"><pre>Result: </pre></h3>
+        </div>
+    </section>
     <script src="assets/javascript/cipher.js">
     </script>
 </body>

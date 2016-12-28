@@ -3,25 +3,57 @@
 }
 
 body{
+	margin: 0px;
 	background-image: url(../images/safe.jpg);
 	background-size: cover;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 700;
 	color: white;
 }
 
-h1{
+h1,h2 {
 
 	background-color: black;
 	padding: 15px;
 	font-size: 44px;
 	text-align: center;
 	margin: 0px;
-	float: left;
-	width: 300px;
-	margin-left: 500px;
+	opacity: 0.9;
+	color: white;
+	
 }
 
+h3 {
+
+	background-color: black;
+	padding: 15px;
+	font-size: 36px;
+	text-align: center;
+	margin: 0px;
+	opacity: 0.9;
+	color: white;
+	
+}
+div{
+	background-color: black;
+	color: white;
+	margin-top: 15px;
+}
 input{
-	clear:both;
+	height: 35px;
+	width: 200px;
+	border-radius: 5px;
+	font-size: 18px;
+	margin-top: 10px;
+	background-color: black;
+	color: white;
+
+	
+}
+
+button{
+	background-color: black;
+	color: white;
+	padding: 10px;
+	font-size: 18px;
 }
