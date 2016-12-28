@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-    <link href="assets/css/cipherstyle.css" rel="stylesheet">
+    <!-- <link href="assets/css/cipherstyle.css" rel="stylesheet"> -->
+    <link href="assets/css/reset.css" rel="stylesheet">
     <title>Cipher</title>
 </head>
 
 <body>
     <h1>Cipher </h1>
-    <section id="caesar"> Caesar Cipher
+<!--     <section id="caesar"> Caesar Cipher
         <div>
             <input type="text" id="caesarkey"> Input a number
             <button id="getvalues">ENTER</button>
@@ -29,20 +30,20 @@
             <h3 id="printnumber3"><pre>Result: </pre></h3>
         </div>
     </section>
-    <hr><hr><hr><hr><hr><hr><hr><hr><hr>
+    <hr><hr><hr><hr><hr><hr><hr><hr><hr> -->
     <section id="vigenere"> Vigenere Cipher
         <div>
             <input type="text" id="vigenerekey"> Input a number
-            <button id="getvalues">ENTER</button>
-            <h3 id="printnumber">Your key is: </h3>
+            <button id="getvaluesv">ENTER</button>
+            <h3 id="printnumberv">Your key is: </h3>
         </div>
         
         <div>
-            <input type="text" id="vmessage"> Input message
+            <input type="text" id="messagev"> Input message
             <button id="getmessagev">DECODE</button>
         </div>
         <div>
-            <h3 id="printnumberv"><pre>Result: </pre></h3>
+            <h3 id="printmessagev"><pre>Result: </pre></h3>
         </div>
     </section>
     <script src="assets/javascript/cipher.js">

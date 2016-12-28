@@ -8,35 +8,32 @@ body{
 	background-size: cover;
 	font-size: 18px;
 	font-weight: 700;
-	color: white;
+	color: black;
 }
 
 h1,h2 {
 
-	background-color: black;
 	padding: 15px;
 	font-size: 44px;
 	text-align: center;
 	margin: 0px;
 	opacity: 0.9;
-	color: white;
+	
 	
 }
 
 h3 {
 
-	background-color: black;
 	padding: 15px;
 	font-size: 36px;
 	text-align: center;
 	margin: 0px;
 	opacity: 0.9;
-	color: white;
+	
 	
 }
 div{
-	background-color: black;
-	color: white;
+	
 	margin-top: 15px;
 }
 input{
@@ -45,8 +42,7 @@ input{
 	border-radius: 5px;
 	font-size: 18px;
 	margin-top: 10px;
-	background-color: black;
-	color: white;
+	
 
 	
 }
