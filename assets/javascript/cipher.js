@@ -8,6 +8,7 @@
      var n;
      var o;
      var krotnum;
+     var variable;
     
 
 
