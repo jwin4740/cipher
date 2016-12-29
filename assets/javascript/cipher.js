@@ -7,9 +7,9 @@
      var decodedv = "";
      var n;
      var o;
-     var krotnum;
+     var krotnum = [];
      var variable;
-    
+
 
 
      // $("#getvalues").on("click", function() {
@@ -49,46 +49,47 @@
 
      // });
 
-//----------------vigenere-----------------------
+     //----------------vigenere-----------------------
      $("#getvaluesv").on("click", function() {
 
-         krot = parseFloat($("#vigenerekey").val());
-         console.log("krot is" + krot);
+         krot = ($("#vigenerekey").val());
+         console.log("krot is " + krot);
          $("#printnumberv").append(krot);
-
      });
      $("#getmessagev").on("click", function() {
 
-         messagiv = $("#messagev").val();
-         $("#printmessagev").append(" " + messagiv);
-         console.log(messagiv);
+         messagi = $("#messagev").val();
+         $("#printmessagev").append(" " + messagi);
+         console.log(messagi);
+// fill krotnum array
+         for (var i = 0, m = krot.length; i < m; i++) {
+             krotnum.push(krot.charCodeAt(i));
+             console.log(krotnum);
+         }
+console.log(krotnum);
+         for (var i = 0, n = messagi.length, m = krot.length; i < n; i++) {
 
-         for (var i = 0, n = messagi.length, o = krot.length; i < n; i++) {
-             if (krot.charCodeAt(i) > 64 && krot.charCodeAt(i) < 91) {
-                 krotnum += (String.fromCharCode(((messagi.charCodeAt(i) - 65 + key) % 26 + 65)));
-
-                 if (messagi.charCodeAt(i) > 64 && messagi.charCodeAt(i) < 91) {
-                 decoded += (String.fromCharCode(((messagi.charCodeAt(i) - 65 + key) % 26 + 65)));
 
 
-             console.log("vigenere message: " + messagiv[i]);
-             console.log("vigenere message: " + messagiv.charCodeAt(i));
-                    if (islower(krot[i]))
-                    {
-                        krot[i] = (krot[i] - 97);
-                    }
-                        
-                    if (isupper(krot[i]))
-                    {
-                        krot[i] = (krot[i] - 65);
-                    }
-             else
-             {
-                decoded += messagi[i];
+             if (messagi.charCodeAt(i) > 64 && messagi.charCodeAt(i) < 91) {
+
+                 decodedv += (String.fromCharCode(((messagi.charCodeAt(i) - 65 + krotnum[i]) % 26 + 65)));
+                 console.log(krotnum[i]);
+             } 
+
+             else if (messagi.charCodeAt(i) > 96 && messagi.charCodeAt(i) < 123) {
+
+                 decodedv += (String.fromCharCode(((messagi.charCodeAt(i) - 97 + krotnum[i]) % 26 + 97)));
+                 console.log(krotnum[i]);
+             } 
+             else {
+                 decodedv += messagi[i];
+                 console.log(krotnum[i]);
              }
          }
-         console.log(messagi);
-         $("#printnumber3").append(decoded);
+         console.log(krotnum);
+         console.log(decodedv);
+
 
 
 
