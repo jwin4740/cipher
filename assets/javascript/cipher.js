@@ -1,16 +1,17 @@
  $(document).ready(function() {
-     var key;
-     var messagi;
+     var key = "";
+     var messagi = "";
      var decoded = "";
-     var krot;
-     var messagiv;
+     var krot = "";
+     var messagiv = "";
      var decodedv = "";
-     var n;
-     var o;
      var krotnum = [];
-     var variable;
+     var variable = "";
+     var krotUpNum = "";
+     var krotLowNum = "";
+     var krotElse = "";
 
-
+     
 
      // $("#getvalues").on("click", function() {
 
@@ -61,30 +62,37 @@
          messagi = $("#messagev").val();
          $("#printmessagev").append(" " + messagi);
          console.log(messagi);
-// fill krotnum array
-         for (var i = 0, m = krot.length; i < m; i++) {
+         // fill krotnum array
+         for (var i = 0, p = krot.length; i < p; i++) {
              krotnum.push(krot.charCodeAt(i));
-             console.log(krotnum);
+             console.log("modulo krot: " + krotnum[i]);
          }
-console.log(krotnum);
+         console.log(krotnum);
          for (var i = 0, n = messagi.length, m = krot.length; i < n; i++) {
 
+             if (krotnum[i % m] > 64 && krotnum[i % m] < 91) {
+                 krotUpNum = krotnum[i % m] - 65;
+                 console.log("if cond: " + krotUpNum);
 
+             } else if (krotnum[i % m] > 96 && krotnum[i % m] < 123) {
+                 krotLowNum = krotnum[i % m] - 97;
+                 console.log("if else cond: " + krotLowNum);
+             } else {
+                 krotElse = krotnum[i % m];
+                 console.log("else cond: " + krotElse);
+             }
 
              if (messagi.charCodeAt(i) > 64 && messagi.charCodeAt(i) < 91) {
 
-                 decodedv += (String.fromCharCode(((messagi.charCodeAt(i) - 65 + krotnum[i]) % 26 + 65)));
-                 console.log(krotnum[i]);
-             } 
+                 decodedv += (String.fromCharCode(((messagi.charCodeAt(i) - 65 + krotUpNum) % 26 + 65)));
+                 console.log("uppercase " + krotnum[i]);
+             } else if (messagi.charCodeAt(i) > 96 && messagi.charCodeAt(i) < 123) {
 
-             else if (messagi.charCodeAt(i) > 96 && messagi.charCodeAt(i) < 123) {
-
-                 decodedv += (String.fromCharCode(((messagi.charCodeAt(i) - 97 + krotnum[i]) % 26 + 97)));
-                 console.log(krotnum[i]);
-             } 
-             else {
+                 decodedv += (String.fromCharCode(((messagi.charCodeAt(i) - 97 + krotLowNum) % 26 + 97)));
+                 console.log("lowercase " + krotnum[i]);
+             } else {
                  decodedv += messagi[i];
-                 console.log(krotnum[i]);
+
              }
          }
          console.log(krotnum);
@@ -95,4 +103,22 @@ console.log(krotnum);
 
      });
      //-------------------------
+     $("#reset").on("click", function reset() {
+         key = "";
+         messagi = "";
+         decoded = "";
+         krot = "";
+         messagiv = "";
+         decodedv = "";
+         krotnum = [];
+         variable = "";
+         krotUpNum = "";
+         krotLowNum = "";
+         krotElse = "";
+         
+         $("#vigenerekey").val("");
+         $("#printnumberv").html("Your key is: ");
+         $("#messagev").val("");
+         $("#printmessagev").html("Result: ");
+     });
  });
