@@ -16,14 +16,14 @@
      $("#getvalues").on("click", function() {
 
          key = parseFloat($("#caesarkey").val());
-         $("#printnumber").append(key);
+       
 
      });
 
      $("#getmessage").on("click", function() {
 
          messagi = $("#message").val();
-         $("#printmessage").append(" " + messagi);
+        
          console.log(messagi);
 
 
@@ -44,7 +44,7 @@
              }
          }
          console.log(messagi);
-         $("#printnumber3").append(decoded);
+         $("#printmessage").append(decoded);
 
 
 
@@ -55,7 +55,7 @@
 
          krot = ($("#vigenerekey").val());
          console.log("krot is " + krot);
-         $("#printnumberv").append(krot);
+         
      });
      $("#getmessagev").on("click", function() {
 
@@ -115,9 +115,12 @@
          krotUpNum = "";
          krotLowNum = "";
          krotElse = "";
-         
+         $("#caesarkey").val("");
          $("#vigenerekey").val("");
-         $("#printnumberv").html("Your key is: ");
+      
+        $("#message").val("");
+        $("#printnumber3").html("Result: ");
+         
          $("#messagev").val("");
          $("#printmessagev").html("Result: ");
      });

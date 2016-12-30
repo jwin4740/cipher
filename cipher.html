@@ -10,44 +10,42 @@
 </head>
 
 <body>
-    <h1>Cipher </h1>
-    <button id="reset">RESET</button>
-    <section id="caesar"> 
-    <h2>Caesar Cipher</h2>
+    <h1>Cipher Code </h1>
+    
+    <section class="sectional" id="caesar">
+        <h2>Caesar Cipher</h2>
         <div>
-            <input type="text" id="caesarkey"> Input a number
+            <input placeholder="POSITIVE INTEGER" type="text" id="caesarkey">
             <button id="getvalues">ENTER</button>
-            <br>
-            <br>
-            <h3 id="printnumber">Your key is: </h3>
         </div>
         <br>
-        <br>
-        <br>
         <div>
-            <input type="text" id="message"> Input message
+            <input placeholder="INPUT MESSAGE" type="text" id="message"> 
             <button id="getmessage">DECODE</button>
         </div>
         <div>
-            <h3 id="printnumber3"><pre>Result: </pre></h3>
+            <p id="printmessage">Result: </p>
         </div>
     </section>
-    <hr><hr><hr><hr><hr><hr><hr><hr><hr>
-    <section id="vigenere"> Vigenere Cipher
+    <hr>
+    <hr><hr><hr><hr><hr><hr>
+    <section class="sectional" id="vigenere">
+        <h2>Vigenere Cipher</h2>
         <div>
-            <input type="text" id="vigenerekey"> Input a word
+            <input placeholder="TYPE WORD" type="text" id="vigenerekey"> 
             <button id="getvaluesv">ENTER</button>
-            <h3 id="printnumberv">Your key is: </h3>
         </div>
-        
         <div>
-            <input type="text" id="messagev"> Input message
+            <input placeholder="INPUT MESSAGE" type="text" id="messagev">
             <button id="getmessagev">DECODE</button>
         </div>
         <div>
-            <h3 id="printmessagev"><pre>Result: </pre></h3>
+            <p id="printmessagev">Result: </p>
         </div>
     </section>
+    <div id="reset">
+    <button class="resetbutton" id="reset">RESET</button>
+    </div>
     <script src="assets/javascript/cipher.js">
     </script>
 </body>
