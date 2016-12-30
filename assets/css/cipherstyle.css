@@ -4,34 +4,22 @@
 
 body{
 	margin: 0px;
-	background-image: url(../images/safe.jpg);
-	background-size: cover;
+	/*background-image: url(../images/safe.jpg);
+	background-size: cover;*/
 	font-size: 18px;
 	font-weight: 700;
 	color: black;
 }
 
-h1,h2 {
-
-	padding: 15px;
-	font-size: 44px;
-	text-align: center;
-	margin: 0px;
-	opacity: 0.9;
-	
-	
+#reset{
+	width: 200px;
+	float: right;
+	margin-right: 100px;
+}
+#caesar{
+	clear: both;
 }
 
-h3 {
-
-	padding: 15px;
-	font-size: 36px;
-	text-align: center;
-	margin: 0px;
-	opacity: 0.9;
-	
-	
-}
 div{
 	
 	margin-top: 15px;
